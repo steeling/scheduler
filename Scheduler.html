@@ -1,0 +1,135 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Process Scheduler</title>
+  <link rel="stylesheet" href="css/foundation.css" />
+  <script src="js/vendor/modernizr.js"></script>
+  <style type="text/css">
+
+    .GantChart{
+      margin-top:50px;
+    }
+
+    .gant{
+      display: inline !important;
+      width:40px !important;
+      margin:auto !important;
+      background-color:white !important;
+    }
+
+    #numqs {
+      width:170px !important;
+      margin:auto;
+    }
+
+    input[type="text"]{
+      display: inline !important;
+      width:40px !important;
+      margin:auto !important;
+      background-color:white !important;
+    }
+
+    .gantnums{
+      margin-top: emCalc(-12);
+      margin-bottom: emCalc(18);
+      display: inline;
+}
+
+
+
+
+  </style>
+</head>
+<body>
+  <div id="myModal" class="reveal-modal" style="z-index:9999; top: 50px" data-reveal data-options="close_on_background_click: false;">
+    <label style="text-align:center" id="errorLabel">Input information to start practice</label>
+    <input type="number" id="numqs" placeholder="Number of questions">
+    <label style="text-align:center"><strong>Select Scheduling algorithms you want to appear</strong></label>
+    <div class="row">
+      <div class="small-6 columns">
+        <div class="row">
+          <input style="margin-top:20px;" class="algs"  id="roundRobinCheck" type="checkbox"><label for="checkbox1">Round Robin</label>
+        </div>
+        <div class="row">
+          <input class="algs" id="FCFS" type="checkbox"><label for="FCFS">First Come First Serve</label>
+        </div>
+      <div class="row">
+          <input class="algs"  id="PriorityCheck" type="checkbox"><label for="PriorityCheck">Priority</label>
+      </div>
+      </div>
+
+      <div class="small-6 columns">
+        <div class="row">
+          <input class="algs" style="margin-top:20px" id="SRJFCheck" type="checkbox"><label for="SRJFCheck">Shortest Remaining Job First</label>
+        </div>
+        <div class="row">
+          <input class="algs" id="SJFCheck" type="checkbox"><label for="SJFCheck">Shortest Job First</label>
+        </div>
+      </div>
+    </div>
+
+
+    <a class="close-reveal-modal">&#215;</a>
+    <div class="row" style="text-align:center">
+      <a class="button" align="middle"style="margin-top:20px;" id="Go">Go</a>
+    </div>
+  </div>
+
+
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="javascript: window.location.reload();">Process Scheduler</a></h1>
+      </li>
+
+      <li class="toggle-topbar menu-icon"><a href="">Menu</a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </section>
+  </nav>
+<div class="row">
+
+<div class="large-12 columns" id="meta-row">
+  <label id="counter" style="margin-top:0px;font-size:2em;display:inline"></label>
+  <label id="score" style="margin-top:0px;font-size:2em;  color:#00FF00; float:right;display:inline"></label>
+  <div class="text-center" id="table_holder" style="margin-top:0px;text-align:center">
+  </div>
+</div>
+</div>
+
+
+
+<div class="row" id="nextRow">
+  <div class="wrapper small-4 medium-4 large-4 columns" id ="checkWrapper" style="text-align:center; display:inline;">
+    <button id="checkQuestion" style="display:none;">Check Answer</button>
+    <img src="img/check.png" id="checkmark" style="width:80px; display:none">
+    <img src="img/redx.png" id="redx" style="width:100px; display:none">
+
+  </div>
+
+  <div class="wrapper small-4 medium-4 large-4 columns" style="text-align:right;">
+    <button id="nextQuestion" style="display:none;">Next Question</button>
+  </div>
+</div> 
+<script src="js/vendor/jquery.js"></script>
+
+<script src="js/CPU/scheduleSolver.js"></script>
+<script src="js/CPU/ScheduleGenerator.js"></script>
+<script src="js/CPU/SchedulerMain.js"></script>
+<script src="js/CPU/SchedulerSetup.js"></script>
+<script src="js/CPU/checkAnswer.js"></script>
+
+<script src="js/foundation.min.js"></script>
+<script>
+$(document).foundation();
+</script>
+</body>
+</html>

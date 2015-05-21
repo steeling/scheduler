@@ -1,0 +1,50 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Process Scheduler</title>
+  <link rel="stylesheet" href="css/foundation.css" />
+  <script src="js/vendor/modernizr.js"></script>
+  <style type="text/css">
+
+    .GantChart{
+      margin-top:50px;
+      overflow:hidden;
+    }
+
+    input[type="text"]{
+      float:left;
+      width:40px;
+    }
+
+  </style>
+</head>
+<body>
+<nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="#">Process Scheduler</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="">Menu</a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+     <!-- <ul class="right">
+        <li><a href="list.html">Home</a></li>
+        <li><a href="index.html">Logout</a></li>
+        <li class="active"><a href="#">Time Remaining: 10:05</a></li>
+      </ul>
+    </section> 
+    //-->
+  </nav>
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/foundation.min.js"></script>
+<script>
+$(document).foundation();
+</script>
+</body>
+</html>
